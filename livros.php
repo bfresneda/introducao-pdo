@@ -9,8 +9,10 @@ $consulta = $consultadb->execute();
 
 $livros = $consultadb->fetchAll(PDO::FETCH_ASSOC);
 
-var_dump($livros);
+//var_dump($livros);
 
-
+foreach($livros as  $livro){
+    echo $livro["id_produto"]."<br>";
+}
 
 ?>
